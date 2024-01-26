@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../css/index.css">
-    <script>
-        document.getElementById("demo").textContent = "A paragraph";
-        function myFunction() {
-            document.getElementById("demo").textContent = "Paragraph changed after click.";
-        }
-    </script>
 </head>
 <body>
 <div id="root">
     <h2>Demo JavaScript in Body</h2>
     <p id="demo"> Placeholder ... </p>
     <button type="button" onclick="myFunction()">Try it</button>
+    <script>
+        document.getElementById("demo").textContent = "A paragraph";
+        function myFunction() {
+            document.getElementById("demo").textContent = "Paragraph changed after click.";
+        }
+    </script> 
+    <!-- Brought the script from head to body to fix the error. Initially script was loading before demo object was created as it was part of head -->
+    <!-- If js in head, then if it is too big in computation, will take time to load and cause performance issue. -->
+    <!-- There is an on load functions also for executing scripts -->
 </div>
 
 </body>
