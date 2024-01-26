@@ -7,7 +7,8 @@
             {
                 y = y + 1;
                 console.log(x+y);
-                let y = 2;
+                var y = 2;
+                // Here y was already defined. We cannot reference it again using let as it is already defined. So replaced let with var.
             }
             console.log(x);
             console.log(y);
