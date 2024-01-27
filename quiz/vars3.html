@@ -2,14 +2,15 @@
     <head>
         <script>
             // Fix all errors in the code below
-            const PI = 3.14159;
+            var PI = 3.14159;
             {
                 let radius = 5;
-                let area = PI * radius * radius;
+                var area = PI * radius * radius;
                 PI = 3.0;
             }
             console.log(area);
-
+            // Since const cannot be re-assigned, we can set PI as a var. Also let keyword is restricted within a scope. So we can
+            // use var to access out of scope.
         </script>
     </head>
     <body>
