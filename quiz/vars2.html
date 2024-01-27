@@ -2,11 +2,13 @@
     <head>
         <script>
             // change the script such that i=0,1,2,3,4 is logged in the console
-            for (var i = 0; i < 5; i++) {
+            for (let i = 0; i < 5; i++) {
+                // changed from var to let. I think that due to var the value of gets updated completely and then prints it. Using let does not let it
+                // and requires it to be done one by one.
                 // setTimeout executes the function after 5 ms
                 setTimeout(function() {
                     console.log(i);
-                }, 0);
+                }, 5);
             }
         </script>
     </head>
