@@ -4,6 +4,7 @@ function makeFunc() {
         console.log(name);
     }
     return dispName;
+    // body of function dispName is returned, along with surrounding scope in which name = 'Mozilla'
 }
 
 const f = makeFunc();
