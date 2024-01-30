@@ -8,7 +8,10 @@
                 // setTimeout executes the function after 5 ms
                 setTimeout(function() {
                     console.log(i);
-                }, 5);
+                }, 0);
+                // here it will execute only after timeout
+                // let changes to block scope. Variable i is local to loop.
+                // with var, i exists out of for loop
             }
         </script>
     </head>
