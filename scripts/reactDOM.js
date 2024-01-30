@@ -1,5 +1,6 @@
 window.onload = function() {
     document.getElementById('myInp').onkeyup = enter;
+    // onkeyup is an event. it gets passed to the enter key automatically.
     document.getElementById('myBtn').onclick = fillMsg;
 }
 
