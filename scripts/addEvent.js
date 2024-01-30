@@ -3,6 +3,7 @@ window.onload = function() {
     x.addEventListener('mouseover', myFunction);
     x.addEventListener('click', mySecondFunction);
     x.addEventListener('mouseout', myThirdFunction);
+    x.addEventListener('click', myFourthFunction); // added a new function
 }
 
 function myFunction() {
@@ -15,4 +16,8 @@ function mySecondFunction() {
 
 function myThirdFunction() {
     document.getElementById('demo').textContent = 'Moused out!';
+}
+
+function myFourthFunction() {
+    console.log("Fourth function");
 }
