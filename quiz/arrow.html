@@ -10,16 +10,23 @@
         <p id="demo"> DEMO </p>
     </div>
     <script>
+        // this.msg = "Hello World" // defining msg here allows for arrow function to get msg information
+        // this is the lexical scope
+        // if we type window.msg = "hello cs" this will work for arrow function
         const obj = {
             msg: 'Hello World',
-            hello:  () => {
+            hello:  function()  {
                 document.getElementById('demo').innerHTML += this.msg;
-            }
+            } // changed arrow function to normal function. Now msg in scope.
+            // arrow gets from surrounding lexical scope
         };
         window.addEventListener('load', () => {
+            console.log(this) // lexical scope surrounding the scope is window for arrow in this case. 
             obj.hello();
         });
-        document.getElementById('btn').addEventListener('click', () => {
+        document.getElementById('btn').addEventListener('click', function() {
+            console.log(this)
+            // this is not bound to surrounding lexical scope but current object
             obj.hello();
         });
     </script>
