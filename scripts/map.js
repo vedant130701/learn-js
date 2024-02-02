@@ -8,7 +8,7 @@ const originalArray = [
   // Using map to create a new array (shallow copy) with modified names
   const newArray = originalArray.map((item) => {
     // Creating a new object with the same properties
-    // return { id: item.id, name: item.name.toUpperCase(), age: item.age };
+    // return { id: item.id, name: item.name.toUpperCase(), age: item.age }; //new object created here
     // spread syntax creates a shallow copy
     return { ...item, name: item.name.toUpperCase() };
   });
