@@ -16,6 +16,15 @@ class PStackImpl extends PStack {
     super();
   }
 
+  get persons() {
+    return this._persons;
+  }
+
+  set persons(persons) {
+    this._persons = persons;
+  }
+
+  //adding get and set makes it standard and assigns persons to _persons
   push(p) {
     return this._persons.push(p)
   }
@@ -26,7 +35,7 @@ class PStackImpl extends PStack {
 }
 
 let pstack = new PStackImpl();
-pstack.persons = [{name: 'Jojo', age: 21}, {name: 'Gabi', age: 29}]
+pstack.persons = [{name: 'Jojo', age: 21}, {name: 'Gabi', age: 29}] // initally 2 diff obj was created. persons here and _persons in class.
 pstack.push({name: 'Dein', age: 19});
 console.log(pstack.pop());
 console.log(pstack.pop());

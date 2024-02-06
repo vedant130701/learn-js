@@ -35,7 +35,10 @@ class PStackImpl extends PStack {
   show() {
     return this.#persons
   }
-
+  // showId() {
+  //   console.log(this);
+  //   return this.#id;
+  // } if showId here and not in parent then error, as id is private
 }
 
 let pstack = new PStackImpl();
