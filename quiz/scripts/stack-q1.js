@@ -35,6 +35,7 @@ class PStackImpl extends PStack {
 }
 
 let pstack = new PStackImpl();
+// _persons directly also works,but user also has to know that.
 pstack.persons = [{name: 'Jojo', age: 21}, {name: 'Gabi', age: 29}] // initally 2 diff obj was created. persons here and _persons in class.
 pstack.push({name: 'Dein', age: 19});
 console.log(pstack.pop());
