@@ -9,4 +9,5 @@ export function add(a, b) {
 export function multiply(a, b) {
 return a * b;
 }
-  
+// but if we do export default on any one, then only one can be exported, both cant be.
+// we can also do export {add, multiply}
